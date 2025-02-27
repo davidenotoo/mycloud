@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galleria Media</title>
+  <title>My Cloud</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons CSS -->
@@ -69,8 +69,6 @@
   </style>
 </head>
 <body class="container mt-4">
-  <h1 class="text-center">Galleria Media</h1>
-
   <!-- Input file nascosto -->
   <input type="file" id="fileInput" accept="image/*,video/*" multiple style="display: none;">
 
@@ -187,11 +185,11 @@
       for (const file of files) {
         try {
           await uploadSingleFile(file);
+          alert("File caricati con successo!");
         } catch (error) {
           alert(error.message);
         }
       }
-      alert("File caricati con successo!");
       fetchMedia(); // Ricarica la galleria dopo il caricamento
     }
 
